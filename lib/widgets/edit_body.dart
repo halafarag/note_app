@@ -22,7 +22,7 @@ class EditBody extends StatelessWidget {
             height: 50,
           ),
           CustomTextFeild(hint: 'Title'),
-          const SizedBox(height: 20,),
+          const  SizedBox(height: 20,),
           CustomTextFeild(hint: 'Note',maxLines: 5,),
         ],
       ),
