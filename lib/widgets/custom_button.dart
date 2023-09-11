@@ -3,12 +3,12 @@ import 'package:notes_app/widgets/constants.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({super.key, this.onTap, this.isLoading = false});
-  final void Function()? onTap;
+  final VoidCallback? onTap;
   final bool isLoading;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap,
       child:  Container(
         child:  Center(
             child: isLoading ? SizedBox(
