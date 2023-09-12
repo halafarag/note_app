@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notes_app/cubits/read_notes_cubit/notes_cubit.dart';
 import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/widgets/app_bar.dart';
+import 'package:notes_app/widgets/colors_list_view.dart';
+import 'package:notes_app/widgets/edit_note_colors_list.dart';
 import 'package:notes_app/widgets/text_field.dart';
 
 class EditBody extends StatefulWidget {
@@ -15,6 +17,7 @@ class EditBody extends StatefulWidget {
 
 class _EditBodyState extends State<EditBody> {
   String? title, content;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -55,6 +58,12 @@ class _EditBodyState extends State<EditBody> {
             onChanged: (value) {
               content = value;
             },
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+           EditNoteColorsList(
+            note:widget.note ,
           ),
         ],
       ),
